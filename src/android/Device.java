@@ -150,9 +150,7 @@ public class Device extends CordovaPlugin {
         return sdkversion;
     }
     
-    @TargetApi(4)
     public int getSDKVersionINT() {
-	@SuppressLint("NewApi")
         int sdkversion = android.os.Build.VERSION.SDK_INT;
         return sdkversion;
     }
