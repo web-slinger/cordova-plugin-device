@@ -241,7 +241,8 @@ Get the device hardware serial number ([SERIAL](http://developer.android.com/ref
 ### Supported Platforms
 
 - Android
-- 
+ 
+
 ## device.apilevel
 
 Get the Android SDK Level  ([SDK_INT](http://developer.android.com/reference/android/os/Build.VERSION.html#SDK_INT)).
