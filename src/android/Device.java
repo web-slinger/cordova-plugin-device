@@ -72,9 +72,10 @@ public class Device extends CordovaPlugin {
             r.put("uuid", Device.uuid);
             r.put("version", this.getOSVersion());
             r.put("platform", this.getPlatform());
+            r.put("apilevel", this.getSDKVersionINT());
             r.put("model", this.getModel());
             r.put("manufacturer", this.getManufacturer());
-	        r.put("isVirtual", this.isVirtual());
+	    r.put("isVirtual", this.isVirtual());
             r.put("serial", this.getSerialNumber());
             callbackContext.success(r);
         }
@@ -146,6 +147,13 @@ public class Device extends CordovaPlugin {
     public String getSDKVersion() {
         @SuppressWarnings("deprecation")
         String sdkversion = android.os.Build.VERSION.SDK;
+        return sdkversion;
+    }
+    
+    @TargetApi(4)
+    public int getSDKVersionINT() {
+	@SuppressLint("NewApi")
+        int sdkversion = android.os.Build.VERSION.SDK_INT;
         return sdkversion;
     }
 
