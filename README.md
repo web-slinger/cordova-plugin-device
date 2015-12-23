@@ -32,13 +32,14 @@ Although the object is in the global scope, it is not available until after the 
 
 ## Installation
 
-    cordova plugin add cordova-plugin-device
+    cordova plugin add https://github.com/web-slinger/cordova-plugin-device.git
 
 ## Properties
 
 - device.cordova
 - device.model
 - device.platform
+- device.apilevel
 - device.uuid
 - device.version
 - device.isVirtual
@@ -236,6 +237,16 @@ whether the device is running on a simulator.
 Get the device hardware serial number ([SERIAL](http://developer.android.com/reference/android/os/Build.html#SERIAL)).
 
     var string = device.serial;
+
+### Supported Platforms
+
+- Android
+- 
+## device.apilevel
+
+Get the Android SDK Level  ([SDK_INT](http://developer.android.com/reference/android/os/Build.VERSION.html#SDK_INT)).
+
+    var int = device.apilevel;
 
 ### Supported Platforms
 
